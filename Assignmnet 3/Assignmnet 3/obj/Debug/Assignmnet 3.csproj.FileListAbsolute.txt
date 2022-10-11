@@ -1,0 +1,6 @@
+C:\Users\ADMIN-PC\Documents\Visual Studio 2013\Projects\Assignmnet 3\Assignmnet 3\bin\Debug\Assignmnet 3.exe.config
+C:\Users\ADMIN-PC\Documents\Visual Studio 2013\Projects\Assignmnet 3\Assignmnet 3\obj\Debug\Assignmnet 3.csprojResolveAssemblyReference.cache
+C:\Users\ADMIN-PC\Documents\Visual Studio 2013\Projects\Assignmnet 3\Assignmnet 3\bin\Debug\Assignmnet 3.exe
+C:\Users\ADMIN-PC\Documents\Visual Studio 2013\Projects\Assignmnet 3\Assignmnet 3\bin\Debug\Assignmnet 3.pdb
+C:\Users\ADMIN-PC\Documents\Visual Studio 2013\Projects\Assignmnet 3\Assignmnet 3\obj\Debug\Assignmnet 3.exe
+C:\Users\ADMIN-PC\Documents\Visual Studio 2013\Projects\Assignmnet 3\Assignmnet 3\obj\Debug\Assignmnet 3.pdb
