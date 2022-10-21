@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+.body {
+  max-width: 1200px;
+  margin: auto auto;
+}
+.navigation {
+  height: 10vh;
+  padding: 1vh;
+  float: right;
+  font: inherit; 
+}
+.navigation ul li {
+  list-style: none;
+  float: left;
+}
+.navigation ul li a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 2vh 2vh;
+  margin: auto;
+  color: black;
+  font-weight: 500;
+}
+.logo {
+  float: left;
+    margin-left: 10px;
+    padding: 1vh ;
+}
+.header img{
+
+
+  max-width: 100% ;
+  background: #fff;
+    
+}
+.heading h1{
+    display:inline-block;
+
+}
+.heading {
+    text-align: center ;
+    margin: 10px ;
+}
+.description{
+   margin-left: 20px;
+   margin-right: 20px ;
+   text-align:  center;
+   padding: 0 100px;
+
+}
+.description .button {
+    text-decoration-line: none ;
+    background-color: cadetblue;
+    color: #fff;
+    border:none; 
+    border-radius:10px; 
+    padding:10px;
+    height:20px; 
+    margin : auto ;
+    width: 20%;
+    
+}
+.Users{
+ 
+    margin: 20px ;
+    display: flex ;
+    flex-direction: row ;
+    align-content: space-between ;
+    justify-content: center;
+}
+.User{
+    padding: 0 15px ;
+    text-align: center;
+}
+.User:active{
+    background-color: cadetblue
+}
+.User:hover{
+    background-color: cadetblue
+}
+
