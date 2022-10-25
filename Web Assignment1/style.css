@@ -106,6 +106,16 @@
     text-align: center ;
     
 }
+.invalid{
+  border-color: red;
+  font-size: 0.8em;
+  color: red;
+}
+.textarea{
+  width: 60% ;
+  margin: auto;
+  text-align: center;
+}
 .service {
   width: 20%;
   display: inline-block;
