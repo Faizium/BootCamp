@@ -1,0 +1,126 @@
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Web Assignment 1</title>
+     
+  </head>
+ <body>
+        <script type="text/javascript" src="myjavascript.js"></script>
+        <div class="navbar">
+        <div class="logo"><h1> LOGO </h1></div>
+        <ul>
+          <li><a class="active" href="">Home</a></li>
+          <li><a href="">My Work</a></li>
+          <li><a href="">About Me</a></li>
+          <li><a href="">Contact Us</a>
+        </ul>
+      </div>
+
+      <!-- section 2 showcase -->
+      <div class="showcase center-text">
+        <div class="overlay">
+          <h1>My Country</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
+            repudiandae distinctio sequi ex tempora architecto incidunt vitae
+            eaque, labore minus voluptatibus qui libero accusantium debitis
+            dolorem minima cupiditate iste eveniet!
+          </p>
+        </div>
+      </div>
+      <!-- section 3 info -->
+      <div class="info center-text">
+        <h1>Heading text</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
+          adipisci sapiente laborum quae commodi minima, deserunt sunt
+          exercitationem nobis officiis maiores? Corporis, non voluptatibus?
+          Aspernatur dicta praesentium quas aperiam, fuga consequatur est dolor
+          nisi unde rerum similique dignissimos ipsam nam veritatis explicabo
+          exercitationem. Ea, omnis deserunt asperiores in consequuntur ex.
+        </p>
+        <button  onclick="myFunction()" class="explore">Explore</button>
+      </div>
+ <h1>Fill your Interests</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates,
+          tempora.
+        </p>
+        <br />
+        <div class="data">
+          <form method="get">
+            <label for="name">Name</label>
+<input type="text" id="name" name="name" />
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" />
+
+            <label for="dob">DOB</label>
+            <input type="date" id="dob" name="dob" />
+
+            <label for="Interest">Select your Interest</label>
+            <select id="Interest" name="Interest">
+              <option value="0">-select-</option>
+              <option value="Public Speaking">public speaking</option>
+              <option value="Gaming">Gaming</option>
+              <option value="Politics">Politics</option>
+              <option value="Volunteerism">Volunteerism<option>
+              <option value="Leadership">Leadership</option>
+            </select>
+
+            <input
+              type="checkbox"
+              name="individual"
+              id="individual"
+              value="individual"
+            />
+            <label for="individual">Individual</label>
+            <input
+              type="checkbox"
+              name="organization"
+              id="organization"
+              value="organization"
+            />
+            <label for="organization">Organization</label><br />
+
+            <label for="textarea">About you</label>
+            <textarea
+              name="textarea"
+              id="textarea"
+              cols="30"
+              rows="7"
+            ></textarea>
+
+            <input type="submit" value="Send Details" />
+          </form>
+     </div>
+     <br>
+            <div class="counter">
+                <h1> Counter</h1>
+            <br>
+            </div>
+                <div class="numberfeild">
+                    <label>Enter number<input type="number" id="num" ></label>
+                    <button class="add explore" id ="add"> Add</button>
+                    <button class="subtract explore" id="subtract">Subtract</button>
+    
+     </div>
+     <br>
+     <div class=" namedisplay counter"><h1>Name Display Counter</h1></div>
+      <div class="numberfeild" >
+        <label> First Name<input type = "text" id="firstname">   </label>
+        <label> Second Name <input type="text" id="secondname"></label>
+        <label> Format <select name="Name Format" id="format">
+             <option value="firstname+secondname">LastName,FirstName</option>
+             <option value="firstname+secondname">FirstName,LastName</option>
+             </select></label>
+         <input type="submit" value="Submit" class="explore">
+     </div>
+
+    </body>
+    

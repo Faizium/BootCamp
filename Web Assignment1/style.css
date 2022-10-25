@@ -1,0 +1,322 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+.body {
+  max-width: 1200px;
+  margin: auto auto;
+}
+
+.center-text {
+  text-align: center;
+}
+.text-start {
+  text-align: start;
+}
+
+/* section 1 navbar */
+.navbar {
+  height: 10vh;
+  padding: 1vh;
+}
+.navbar .logo {
+  float: left;
+}
+.navbar .logo img {
+  height: 70px;
+  margin-top: -15px;
+}
+.navbar ul {
+  float: right;
+}
+.navbar ul li {
+  list-style: none;
+  float: left;
+}
+.navbar ul li a {
+  display: inline-block;
+  text-decoration: none;
+  padding: 2vh 2vh;
+  margin: auto;
+  color: black;
+  font-weight: 500;
+}
+.active {
+  border: 1px solid black;
+}
+.navbar ul li a:hover {
+  border: 1px solid gray;
+  cursor: pointer;
+}
+/* navbar end */
+
+/* section 2 showcase */
+.showcase {
+  background-image: url(./Images/banner.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100%;
+  border-radius: 10px;
+}
+.overlay {
+  padding: 10vh 10vw;
+}
+.overlay h1 {
+  padding: 25px 0;
+  font-size: 50px;
+}
+/* showcase end */
+
+/* section 3 info */
+.info {
+  margin-top: 4vh;
+  padding: 4vh 10vw;
+}
+.info h1 {
+  padding: 15px 0;
+}
+.explore {
+  margin: 25px 0;
+  padding: 10px 30px;
+  border-radius: 4px;
+  background-color:lightgreen;
+  font-weight: bold;
+  cursor: pointer;
+}
+/* info end */
+
+/* section 4 services */
+.services {
+  margin-bottom: 5vh;
+}
+.counter{
+    width: 90%;
+    margin: auto ;
+    background-color: darkgrey ;
+    text-align: center ;
+
+}
+.numberfeild{
+    width: 40% ;
+    margin: auto;
+    margin-top: 10px ;
+    text-align: center ;
+    
+}
+.service {
+  width: 20%;
+  display: inline-block;
+  margin: 10px 20px;
+}
+.service .img {
+  height: 45vh;
+  background-image: url(./Images/service-1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.service h3,
+p {
+  padding-top: 20px;
+}
+/* services end */
+
+/* section 5 about us */
+.about-us {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 30px;
+  margin-bottom: 50px;
+}
+.about-text {
+  width: 50%;
+}
+.bold {
+  font-size: 35px;
+  padding-right: 100px;
+}
+.light {
+  color: lightgray;
+}
+.find {
+  padding: 12px 30px;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.about-us img {
+  width: 40%;
+  height: 75vh;
+}
+/* about us end */
+
+/* section 6 questions */
+.questions {
+  background-image: url(./Images/qurestions-banner.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 60vh;
+  padding: 15vh 20vw;
+  margin: 50px 20px;
+}
+.questions .find {
+  background-color: yellow;
+}
+/* questions end */
+
+/* Section 7 contractors and table */
+.contractor {
+  width: 95%;
+  margin: auto;
+  overflow-x: scroll;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 50px 0;
+}
+th {
+  background-color: lightgray;
+  border-bottom: 1px solid black;
+}
+td,
+th {
+  padding: 15px;
+  text-align: left;
+}
+td {
+  border-bottom: 1px solid lightgray;
+}
+/* contractors end */
+
+/* section 8 response */
+.response {
+  width: 95%;
+  margin: 40px auto;
+}
+.data {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+form {
+  width: 50%;
+}
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  width: 30%;
+  background-color: #bbe123;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type="checkbox"] {
+  width: 5%;
+}
+.contactus-img {
+  height: auto;
+  width: 50%;
+  padding: 20px;
+  margin: 30px 0 30px 35px;
+  background-color: lightgray;
+}
+.contactus-img li {
+  list-style: none;
+}
+.contactus-img img {
+  width: 100%;
+}
+/* response end */
+
+/* section 9 contact */
+.contact {
+  background-color: lightgrey;
+  padding: 8vh 10vw;
+}
+.contact p {
+  padding-right: 50vw;
+  margin: 10px 0;
+}
+.contact a {
+  color: blue;
+}
+/* contact end */
+
+/* section 10 footer */
+footer {
+  padding: 20px;
+  height: 60px;
+  background-color: black;
+  color: white;
+}
+/* footer end */
+
+/*section 11 media queries */
+@media screen and (max-width: 900px) {
+  .service {
+    display: block;
+    width: 80%;
+    margin: auto;
+  }
+  .about-us {
+    flex-direction: column;
+  }
+  .about-text {
+    width: 70%;
+  }
+  .about-us img {
+    width: 70%;
+    margin-top: 50px;
+  }
+  .response {
+    text-align: center;
+  }
+  .data {
+    text-align: start;
+    display: block;
+  }
+  form {
+    width: 80%;
+    margin: auto;
+  }
+  .contactus-img {
+    width: 80%;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 700px) {
+  .navbar {
+    height: auto;
+  }
+  .navbar .logo {
+    float: none;
+    text-align: center;
+  }
+  .navbar ul {
+    text-align: center;
+    float: none;
+  }
+  .navbar ul li {
+    float: none;
+  }
+  .navbar ul li a {
+    display: block;
+    border: none;
+    border-bottom: 1px dotted black;
+  }
+}
