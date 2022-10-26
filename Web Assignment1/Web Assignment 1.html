@@ -53,15 +53,18 @@
         </p>
         <br />
         <div class="data">
-         <form id="form1" action = "" target="_self" >
+         <form novalidate id="form1" action="" onsubmit="event.preventDefault();">
             <label for="name">Name</label>
             <input type="text"  id="name" name="name" />
-
-            <label for="email">Email</label>
+            <b><p class = "error" id="nameerror"></p></b> 
+             
+            <label for="email" >Email</label>
             <input type="email" id="email" name="email" />
+            <b><p class = "error" id="mailerror"></p></b>
 
             <label for="dob">DOB</label>
             <input type="date" id="dob" name="dob" />
+             <b><p class = "error" id="doberror"></p></b>
 
             <label for="Interest">Select your Interest</label>
             <select id="Interest" name="Interest">
@@ -72,6 +75,7 @@
               <option value="Volunteerism">Volunteerism</option>
               <option value="Leadership">Leadership</option>
             </select>
+             <b><p class = "error" id="interesterror"></p></b>
 
             <input
               type="checkbox"
@@ -96,7 +100,7 @@
               rows="7"
             ></textarea>
 
-            <button class="explore" id="submit" onclick= "return handleClick3(); ">Send Details</Details>
+            <button class="explore" id="submit" onclick="handleClick3()">Send Details</button>
           </form>
      </div>
      <br>
@@ -126,7 +130,7 @@
      </div>
      <div class="counter"><h1>Number of Characters in Text Area</h1> </div>
      <div class="textarea">
-      <label>Enter Text Here<textarea id="txt"  name="txt" rows="5" cols="20"></textarea></label>
+      <label>Enter Text Here<textarea id="txt"  name="txt" rows="5" cols="20" onkeyup="function3()"></textarea></label>
       <label> Length of Text<b><p id="txtlength"></p></b></label>
       <button class="explore"  onclick="function3()">Calculate Length</button>
      </div>

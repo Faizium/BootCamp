@@ -109,7 +109,12 @@
 .invalid{
   border-color: red;
   font-size: 0.8em;
-  color: red;
+  
+}
+.error{
+     margin-top: 10px ;
+     text-align: center ;
+     color: indianred ;
 }
 .textarea{
   width: 60% ;
