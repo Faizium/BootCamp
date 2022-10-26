@@ -56,7 +56,7 @@ function handleClick3()
     document.getElementById("nameerror").innerHTML = "";
     document.getElementById("mailerror").innerHTML = "";
     document.getElementById("doberror").innerHTML= "";
-    document.getElementById("Interest").innerHTML= "";
+    //document.getElementById("Interest").innerHTML= "";
     
     
     var txtlength = String( document.getElementById("name").value);
@@ -64,7 +64,9 @@ function handleClick3()
     var date = String ( document.getElementById("dob").value);
     var interest = document.getElementById("Interest").value;
     
-    if (txtlength.length > 50 )
+  
+    
+     if (txtlength.length > 50 )
     {
         var nameError = document.getElementById("name");
         nameError.classList.add("invalid");
@@ -112,4 +114,44 @@ function handleClick3()
 
         document.getElementById("interesterror").innerHTML = "Please select the value to proceed" ;
     }
+    document.getElementById("Interest").addEventListener("click",handleClick4);
+
+
 };
+
+function handleClick4() {
+    document.getElementById("interesterror").innerHTML = "";
+    
+    
+}
+function function4() {
+
+   if( String (document.getElementById("username").value) == "FaizanChaudary" && String (document.getElementById("password").value) == "pakistanzindabad") {
+    window.location='http://google.com';
+   }
+    else{
+        window.alert("invalid user");
+    }
+};
+function function5()
+{
+    var msal = document.getElementById("salary").value;
+    var tax = 0;
+    var ygross = 0;
+    var mgross = 0;
+    var ysal = msal*12;
+    switch(ysal){
+        case (ysal<600000):
+            break;
+        case (ysal > 600000 && ysal <1200000):
+          tax =  ((ysal-600000)*25)/100 ;
+          ygross = ysal+tax;
+          mgross = (msal*25)/100;
+          break;
+        case (ysal > 1200000 && ysal <2400000):
+          tax =  ((ysal-600000)*25)/100 ;
+
+
+
+    }
+}

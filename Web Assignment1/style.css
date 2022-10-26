@@ -112,9 +112,21 @@
   
 }
 .error{
-     margin-top: 10px ;
+     margin-top: 10px;
      text-align: center ;
      color: indianred ;
+}
+.dropdwon{
+  margin :auto ;
+  position: relative;
+  z-index: 25;
+}
+.errorinterest{
+  text-align: center ;
+  color: indianred ;
+  position: relative;
+  z-index: 2;
+  
 }
 .textarea{
   width: 60% ;
