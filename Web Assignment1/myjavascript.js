@@ -135,23 +135,71 @@ function function4() {
 };
 function function5()
 {
+    console.log("1");
     var msal = document.getElementById("salary").value;
     var tax = 0;
+    var mtax = 0;
     var ygross = 0;
     var mgross = 0;
     var ysal = msal*12;
-    switch(ysal){
-        case (ysal<600000):
-            break;
-        case (ysal > 600000 && ysal <1200000):
-          tax =  ((ysal-600000)*25)/100 ;
-          ygross = ysal+tax;
-          mgross = (msal*25)/100;
-          break;
-        case (ysal > 1200000 && ysal <2400000):
-          tax =  ((ysal-600000)*25)/100 ;
-
-
-
-    }
-}
+    
+        if (ysal<600000)
+        {
+            tax = 0 ;
+          mtax = 0;
+          ygross = ysal-tax;
+          mgross = msal;
+           console.log("2");
+        }
+        
+     if(ysal > 600000 && ysal <1200000)
+         {
+             tax =  ((ysal-600000)*25)/100 ;
+              ygross = ysal-tax;
+              mtax = (msal*0.025);
+              mgross = msal-(msal*0.025);
+         }
+     if (ysal > 1200000 && ysal <2400000)
+        {  
+          tax =  ((ysal-1200000)*0.125) +(600000*0.025)+15000;
+          ygross = ysal-tax ;
+          mtax =(msal*0.125); 
+          mgross = msal-(msal*0.125);
+        }
+        if (ysal > 2400000 && ysal <3600000)
+          { 
+            tax = ((ysal-2400000)*0.2)+(1200000*0.125) +(600000*0.025)+15000 +165000;
+            ygross = ysal-tax ;
+            mtax = (msal*0.2);
+            mgross = msal-(msal*0.2);
+          }
+        if (ysal > 3600000 && ysal < 6000000)
+        {
+            tax = ((ysal-3600000)*0.25)+(2400000*0.2)+(1200000*0.125) +(600000*0.025)+15000 +165000 +405000 ;
+            ygross = ysal-tax;
+            mtax = (msal*0.25);
+            mgross= msal-(msal*0.25);
+             console.log("3");
+        }
+        if (ysal > 6000000 && ysal < 12000000)
+          {  
+            tax = ((ysal-6000000)*0.32)+(3600000*0.25)+(2400000*0.2)+(1200000*0.125) +(600000*0.025)+15000 +165000 +405000+1005000  ;
+            ygross = ysal-tax;
+            mtax = (msal*0.32);
+            mgross= msal-(msal*0.32);
+          }
+        if(ysal > 12000000 && ysal < 2955000)
+          {   
+              tax = ((ysal-12000000)*0.35)+(6000000*0.32)+(3600000*0.25)+(2400000*0.2)+(1200000*0.125) +(600000*0.025)+15000 +165000 +405000+1005000 ;
+             ygross = ysal-tax;
+            mtax = (msal*0.35);
+             mgross= msal-(msal*0.35);
+          }
+  
+    
+    document.getElementById("mtax").innerHTML = "Monthly Taxable Ammount : "+mtax;
+    document.getElementById("msal").innerHTML = "Monthly Salary After Tax: "+mgross;
+    document.getElementById("ytax").innerHTML = "Yearly Tax : "+tax;
+     console.log("4");
+    document.getElementById("ysal").innerHTML = "Yearly Income After Tax: "+ygross;
+};
