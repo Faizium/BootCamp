@@ -21,9 +21,9 @@
      <br>
    
      <div>
-         <button class="explore" id="btn1" >Append</button>
-         <button class="explore" id="btn2" >Before</button>
-         <button class="explore" id="btn3" >After</button>
+         <button class="explore" id="b1" >Append</button>
+         <button class="explore" id="b2" >Before</button>
+         <button class="explore" id="b3" >After</button>
          <button class="explore" id="btn4" >Prepend</button>
          
          <P class ="para">This Is main Div</P>
@@ -76,13 +76,15 @@
               <option value="Leadership">Leadership</option>
             </select></div>
      
-         <div class="counter"><h1>Table Show and Hide</h1> </div>
-     <div class="numberfeild " >
-         
-    <div class="tooltip">                       
-    <button class="explore" id="hide" >Show</button> 
-    <span class="tooltiptext"></span>
-     </div>
+     <div class="counter"><h1>Table Show and Hide</h1> </div>
+     <div class="numberfeild">
+      <div>
+        <div class="tooltip">
+          <button class="tablehide explore" id="hide">Show</button>
+          <span class="tooltiptext">Show</span>
+          </div>
+      </div>   
+
          
     <table id = "t1">
   <tr>
@@ -180,9 +182,9 @@
        <!--         Question number 23-->
      
      <div class="counter"><h1>Animation: Increase Lenght and Width</h1> </div>    
-     <div class="numberfeild" >
+     <div class="numberfeild lastdiv" >
     
-        <div id="adjust" hidden >
+        <div id="dims" hidden >
         <label>Height</label>
         <input type="number" id="height" value="10">
         <label>Width</label>

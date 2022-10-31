@@ -13,8 +13,10 @@
             $( "#upperTabs" ).tabs();
             $( "#sortable" ).sortable({
                 update: function( event, ui ) {
-                    var newIndex = ui.item.index();
-                    alert("New position is at Index "+newIndex);
+                    var newind = ui.item.index()+1;
+                    var val = String(ui.item.text());
+                    
+                    alert("New position of "+val+" is at Index "+newind);
                 }
             });
             $('#admit').click(function(){
@@ -37,43 +39,48 @@
             $('#detailBack').click(function(){
                 $('a')[1].click();
             });
-            $('#educationNext').click(function(){
+            $('#eduNext').click(function(){
                 $('a')[4].click();
                 $('#userInfo').append('<p>'+"Qualification: "+$("#Qualification").val() +'</p>'+'<br>');
                 $('#userInfo').append('<p>'+"CGPA: "+$("#CGPA").val() +'</p>'+'<br>');
             });
-            $('#educationBack').click(function(){
+            $('#eduBack').click(function(){
                 $('a')[2].click();
             });
-            $('#preferanceNext').click(function(){
+            $('#prefNext').click(function(){
                 $('a')[5].click();
             });
-            $('#preferanceBack').click(function(){
+            $('#prefBack').click(function(){
                 $('a')[3].click();
             });
-            $('#confirmationNext').click(function(){
+            $('#confirmNext').click(function(){
                 $('#whole').hide();
                 $('#userInfo').show();
             });
-            $('#confirmationBack').click(function(){
+            $('#confirmBack').click(function(){
                 $('a')[4].click();
             });
 
         } );
     </script>
     <style>
+        a{
+            text-decoration: none;
+        }
         #btnsId{
             background: orange;
             padding: 0.4em;
             margin: 0.1em;
+            text-decoration: none;
         }
         #btnsId li{
             background: white;
-            color: blue;
+            color: lightblue;
             padding: 4px;
             margin-left: 5px;
             border-radius: 10%;
             display: inline-block;
+            text-decoration: none;
         }
         #upperTabs{
             background-color: lightgrey;
@@ -139,21 +146,21 @@
             background-color: aliceblue; 
         }
         #admit{
-            background-color: seagreen;
+            background-color: lightseagreen;
             border: 0ch;
             border-radius: 10%;
             padding: 0.8%;
             color: white;
         }
         .Back{
-            background-color: red;
+            background-color: indianred;
             border: 0ch;
             border-radius: 10%;
             padding: 0.8%;
             color: white;
         }
         .Next{
-            background-color: blue;
+            background-color: rgb(64, 64, 224);
             border: 0ch;
             border-radius: 10%;
             padding: 0.8%;
@@ -172,6 +179,7 @@
               <li><a href="#Preferances">Preferances</a></li>
               <li><a href="#Confirmation">Confirmation</a></li>
             </ul>
+            
             <div id="introduction">
                 <div id="introPage">
                     <h1> Welcome To CureMD's Admission Portal</h1>
@@ -205,24 +213,24 @@
                 <input type="text" id="Qualification" name="Qualification" placeholder="Enter your Qualification"><br><br>
                 <label for="CGPA"><b> CGPA </b></label><br>
                 <input type="text" id="CGPA" name="CGPA" placeholder="Enter your CGPA"><br><br>
-                <input type="button" id="educationBack" value="Back" Class ="Back">
-                <input type="button" id="educationNext" value="Next" class="Next">
+                <input type="button" id="eduBack" value="Back" Class ="Back">
+                <input type="button" id="eduNext" value="Next" class="Next">
             </div>
             <div id="Preferances">
                 <ul id="sortable">
-                    <li>Web Engineering</li>
-                    <li>SQA</li>
-                    <li>MERN Stack</li>
-                    <li>Artificial Intelligence</li>
+                    <li id="1">Web Engineering</li>
+                    <li id="2">SQA</li>
+                    <li id="3">MERN Stack</li>
+                    <li id="4">Artificial Intelligence</li>
                 </ul>
                 <br>
-                <input type="button" id="preferanceBack" value="Back" Class ="Back">
-                <input type="button" id="preferanceNext" value="Next" class="Next">
+                <input type="button" id="prefBack" value="Back" Class ="Back">
+                <input type="button" id="prefNext" value="Next" class="Next">
             </div>
             <div id="Confirmation">
                 <h1>We have Gathered Information. Do you Want to Proceed?</h1>
-                <input type="button" id="confirmationBack" value="Back" Class ="Back">
-                <input type="button" id="confirmationNext" value="Confirm" class="Next">
+                <input type="button" id="confirmBack" value="Back" Class ="Back">
+                <input type="button" id="confirmNext" value="Confirm" class="Next">
             </div>
         </div>
     </div>

@@ -12,18 +12,22 @@
    
   
     <script>
+  
         $(document).ready(function(){
-            $('#Btn1').click(function(){
+            $("#form1").hide();
+            $('#b1').click(function(){
+                
                 $(".FillForm").slideUp(500,function(){
                 alert("The slideUp() method is finished!")
+                $("#Btn4").show();
                 });
             });
-            $('#Btn2').click(function(){
+            $('#b2').click(function(){
                 $(".FillForm").slideDown(500,function(){
                 alert("The slideDown() method is finished!")
                 });
             });
-            $('#Btn3').click(function(){
+            $('#b3').click(function(){
                 $(".FillForm").slideToggle(500,function(){
                 alert("The slideToggle() method is finished!")
                 });
@@ -59,27 +63,36 @@
         });
     </script>
     <style>
-        #Btn1{
-            background-color: blue;
-            border: 0ch;
+        #b1{
+            background-color: rgb(149, 149, 255);
+            width: 120px;
+            border: none;
             padding: 0.8%;
             color: white;
         }
-        #Btn2{
-            background-color: green;
-            border: 0ch;
+        #b2{
+            background-color: rgb(133, 255, 133);
+            width: 120px;
+            border: none;
             padding: 0.8%;
             color: white;
         }
-        #Btn3{
+        #b3{
             background-color: cornflowerblue;
-            border: 0ch;
+            width: 120px;
+            border: none;
             padding: 0.8%;
             color: white;
         }
-        #Btn3{
+        #b3{
             background-color: gray;
-            border: 0ch;
+            border: none;
+            padding: 0.8%;
+            color: white;
+        }
+        #Btn4{
+            background-color: gray;
+            border: none;
             padding: 0.8%;
             color: white;
         }
@@ -92,6 +105,8 @@
             padding-left: 1em;
         }
         .FillForm{
+            text-align: center;
+            text-justify: center;
             border: 0.1em;
             border-style: solid ;
             border-color: grey;
@@ -110,12 +125,14 @@
     <div class="numberfeild" >
     <div id="upperDiv">
             <h1>Click the Buttons to Slide Up or Down</h1>
-            <input type="button" id="Btn1" value="Slide Up">
-            <input type="button" id="Btn2" value="Slide Down">
-            <input type="button" id="Btn3" value="Toggle Slide">
+            <input type="button" id="b1" value="Slide Up" class="explore">
+            <input type="button" id="b2" value="Slide Down" class="explore">
+            <input type="button" id="b3" value="Toggle Slide" class="explore"><br>
+            <input type="button" id="Btn4" value="Show Feedback Form" >
             <br><br>
         </div>
     <div class="FillForm">
+
         <form action="" id="form1">
             <b><h2>FEEDBACK FORM</h2></b>
             <label for="EmployeeID"><b>Employee ID </b></label><br>

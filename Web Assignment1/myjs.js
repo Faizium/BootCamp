@@ -4,15 +4,15 @@ $(document).ready(
         $(this).css({ 'color': 'red', 'font-size': '150%' })})
               
     
-    $(" #btn1 ").click(function(){
+    $(" #b1 ").click(function(){
     $(".para").append(" Append");
     })
     
-    $("#btn2").click(function(){
+    $("#b2").click(function(){
         $(".para").before("Before");
     }) 
         
-    $("#btn3").click(function(){
+    $("#b3").click(function(){
         $(".para").after("After");
     })
         
@@ -32,14 +32,19 @@ $(document).ready(
          var temp = $(this).val();
      $("#d2").val( temp );
               })
+
+              //Question # 19
+
         $("#t1").hide();
         $('#hide').click(function(){
          $('#t1').toggle();
             if($('#hide').html()=='Hide'){
                 $('#hide').html('Show');
+                $(".tooltiptext").html('Show');
                 }
             else{
                 $('#hide').html('Hide');
+                $(".tooltiptext").html('Hide');
                 }
             });
         
@@ -81,7 +86,7 @@ $(document).ready(
     var Flag=0;
     $('#BtnDimension').click(function(){
     if (Flag==0){
-    $("#adjust").show();
+    $("#dims").show();
     }
     else{
     $("#animbox").animate({
@@ -95,7 +100,7 @@ $(document).ready(
     height: $("#height").val()+"em",
     width: $("#width").val()+"em",
     },5000);
-    $('#adjust').hide();
+    $('#dims').hide();
     var Flag= 1;
     });
     $("#BtnStop").click(function(){
@@ -104,8 +109,8 @@ $(document).ready(
     });
     $("#BtnReset").click(function(){
     $("#animbox").animate({
-    height: $("#height").val()= "10em",
-    width: $("#width").val()= "10em",
+    height: "10em",
+    width: "10em",
     },100);
     Flag=1;
     });

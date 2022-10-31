@@ -8,56 +8,56 @@
     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
         $(document).ready(function(){
-            $('#Btn1').click(function(){
-                $("#Box1").fadeTo(10,0.30);
-                $("#Box2").fadeTo(500,0.30);
-                $("#Box3").fadeTo(3000,0.30);
+            $('#b1').click(function(){
+                $("#Box1").fadeTo(10,0.50);
+                $("#Box2").fadeTo(500,0.50);
+                $("#Box3").fadeTo(2000,0.50);
             });
-            $('#Btn2').click(function(){
+            $('#b2').click(function(){
                 $("#Box1").fadeOut(10);
-                $("#Box2").fadeOut(500);
-                $("#Box3").fadeOut(3000);
+                $("#Box2").fadeOut(1000);
+                $("#Box3").fadeOut(2000);
             });
-            $('#Btn3').click(function(){
+            $('#b3').click(function(){
                 $("#Box1").fadeToggle(10);
                 $("#Box2").fadeToggle(500);
-                $("#Box3").fadeToggle(3000);
+                $("#Box3").fadeToggle(1000);
             });
         });
     </script>
     <style>
         #Box1{
             background-color: blue;
-            width: 5em;
-            height: 5em;
+            width: 10em;
+            height: 10em;
             display: none;
         }
         #Box2{
-            background-color: green;
-            width: 5em;
-            height: 5em;
+            background-color: rgb(41, 128, 0);
+            width: 10em;
+            height: 10em;
             display: none;
         }
         #Box3{
             background-color: red;
-            width: 5em;
-            height: 5em;
+            width: 10em;
+            height: 10em;
             display: none;
         }
-        #Btn1{
-            background-color: blue;
+        #b1{
+            background-color: lightblue;
             border: 0ch;
             padding: 0.8%;
             color: white;
         }
-        #Btn2{
-            background-color: green;
+        #b2{
+            background-color: lightgreen;
             border: 0ch;
             padding: 0.8%;
             color: white;
         }
-        #Btn3{
-            background-color: yellow;
+        #b3{
+            background-color: lightyellow;
             border: 0ch;
             padding: 0.8%;
             color: black;
@@ -66,9 +66,9 @@
 </head>
 <body>
     <div>
-        <input type="button" id="Btn1" value="Fade-In">
-        <input type="button" id="Btn2" value="Fade-Out">
-        <input type="button" id="Btn3" value="Toggle Out">
+        <input type="button" id="b1" value="Fade-In">
+        <input type="button" id="b2" value="Fade-Out">
+        <input type="button" id="b3" value="Toggle Out">
     </div>
     <br>
     <div id="Box1">

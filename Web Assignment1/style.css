@@ -331,32 +331,33 @@ footer {
     display: block;
     border: none;
     border-bottom: 1px dotted black;
+  }}
+
+  .tooltip {
+    position: relative;
+    display: inline-block;
+    
   }
-    .tooltip {
-  position: relative;
-  display: inline-block;
- 
-}
-
-/* Tooltip text */
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: lemonchiffon;
-  color: gray;
-  text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
- 
-  /* Position the tooltip text */
-  position: absolute;
-  z-index: 1;
-}
-
-/* Show the tooltip text when you mouse over the tooltip container */
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-}
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    height: 35px;
+    background-color:rgb(252, 252, 185);
+    color:grey;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+  
 #mainDiv4 p{
         background-color: yellow;
         display: inline-block;
@@ -370,25 +371,28 @@ width: 10em;
 height: 10em;
 }
 
-        #BtnDimension{
-            background-color: blue;
-            border-color: blue;
-            border-radius: 10%;
-            color: white;
-            padding: 1%;
-        }
-        #BtnStop{
-            background-color: red;
-            border-radius: 10%;
-            border-color: red;
-            color: white;
-            padding: 1%;
-        }
-        #BtnReset{
-            background-color: rgb(107, 216, 107);
-            border-radius: 10%;
-            border-color: rgb(107, 216, 107);
-            color: white;
-            padding: 1%;
-        }
-
+#BtnDimension{
+  background-color: lightblue;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 1%;
+}
+#BtnStop{
+  background-color: indianred;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  padding: 1%;
+}
+#BtnReset{
+  background-color: lightgreen;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  padding: 1%;
+}
+.lastdiv{
+  margin-bottom: 200px;
+}
+      

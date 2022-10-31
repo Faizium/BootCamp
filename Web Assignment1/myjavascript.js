@@ -10,11 +10,32 @@ window.onload=function(){
   //details.addEventListener("click",handleClick3);
   handleClick3;
 }
-
+function handleClick5() {
+    document.getElementById('hidetxt').style.display = 'none' ;
+};
+function handleClick7() {
+   window.alert("Error");
+};
+function handleClick6() {
+    
+    document.getElementById('changeimage').src='images/2.png' ;
+};
 function myFunction() {
     document.getElementById('name').focus();
 };
-
+function myFunction1() {
+    var str = "This is the Changed Text.Hey,All your favorite are within reach! is now mobile. Best deals for only, hurry up"
+    document.getElementById('txtpgraph').innerText = str;
+};
+function myFunction2() {
+    var x = document.getElementById("txtpgraph");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+   
+};
 function handleClick1() {
     var val = Number(document.getElementById('num').value);
     console.log(val);
