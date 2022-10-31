@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Q-28</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script>
+    $( function() {
+        $( "#fromDate" ).datepicker();
+        $( "#toDate" ).datepicker();
+        $('#calculate').click(function(){
+            var date1 = $('#fromDate').val();
+            var date2 = $('#toDate').val();
+            var ToDate = new Date(date2);
+            var FromDate = new Date(date1);
+            var Difference_In_Time = ToDate.getTime() - FromDate.getTime();
+  
+            // To calculate the no. of days between two dates
+            var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
+            $("#diffdays").html(parseInt(Difference_In_Days));
+           
+        });
+
+    } );
+  </script>
+</head>
+    
+<body>
+    <div class="counter"><h1>Days Calculator</h1> </div>    
+    <div class="numberfeild" >
+    <p>From Date: <br><input type="text" id="fromDate"></p>
+    <p>To Date: <br><input type="text" id="toDate"></p>
+    <input type="button" id="calculate" value="Calculate Days">
+        <p  id="diffdays"></p>
+    </div>
+</body>
+</html>

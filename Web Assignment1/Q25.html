@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Web Assignment 1</title>
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"> </script>
+      <script src="myjs.js"></script>
+   
+  
+    <script>
+        $(document).ready(function(){
+            $('#Btn1').click(function(){
+                $(".FillForm").slideUp(500,function(){
+                alert("The slideUp() method is finished!")
+                });
+            });
+            $('#Btn2').click(function(){
+                $(".FillForm").slideDown(500,function(){
+                alert("The slideDown() method is finished!")
+                });
+            });
+            $('#Btn3').click(function(){
+                $(".FillForm").slideToggle(500,function(){
+                alert("The slideToggle() method is finished!")
+                });
+            });
+            $("#submit").click(function(){
+                var Flag=0;
+                var characterString = String($("#EmpID").val());
+                if (characterString.length > 50) {
+                    $("#nameError").html("Character Limit Exceeds");
+                    Flag=1;
+                }
+                else if (characterString.length == 0) {
+                    $("#nameError").html("This FIeld cannot be empty");
+                    Flag=1;
+                }
+                else {
+                    $('#nameError').html("");
+                }
+                let feedbackString = $("#feedback1").val();
+                if (feedbackString=="") {
+                    $("#feedbackError").html("Please fill the the textbox");
+                    Flag=1;
+                }
+                if(Flag==0){
+                    $("#Btn4").show();
+                    $("#form1").hide();
+                }
+            });
+            $("#Btn4").click(function(){
+                $('#form1').show();
+                $('#Btn4').hide();
+            });
+        });
+    </script>
+    <style>
+        #Btn1{
+            background-color: blue;
+            border: 0ch;
+            padding: 0.8%;
+            color: white;
+        }
+        #Btn2{
+            background-color: green;
+            border: 0ch;
+            padding: 0.8%;
+            color: white;
+        }
+        #Btn3{
+            background-color: cornflowerblue;
+            border: 0ch;
+            padding: 0.8%;
+            color: white;
+        }
+        #Btn3{
+            background-color: gray;
+            border: 0ch;
+            padding: 0.8%;
+            color: white;
+        }
+        #upperDiv{
+            background-color: lightgrey;
+            border: 0.1em;
+            border-style: solid ;
+            border-color: grey;
+            max-width: 30em;
+            padding-left: 1em;
+        }
+        .FillForm{
+            border: 0.1em;
+            border-style: solid ;
+            border-color: grey;
+            max-width: 30em;
+            padding-left: 1em;
+        }
+        #EmpID{
+            width: 80%;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="counter"><h1>Slide up, slide down, slide toggle</h1> </div>    
+    <div class="numberfeild" >
+    <div id="upperDiv">
+            <h1>Click the Buttons to Slide Up or Down</h1>
+            <input type="button" id="Btn1" value="Slide Up">
+            <input type="button" id="Btn2" value="Slide Down">
+            <input type="button" id="Btn3" value="Toggle Slide">
+            <br><br>
+        </div>
+    <div class="FillForm">
+        <form action="" id="form1">
+            <b><h2>FEEDBACK FORM</h2></b>
+            <label for="EmployeeID"><b>Employee ID </b></label><br>
+            <input type="text" id="EmpID" name="EmployeeID" placeholder="Enter Employee ID"><br>
+            <p id="nameError" ></p>
+            <p>we will never share your email with anyone else</p>
+            <label for="feedback"> <b>FeedBack</b></label><br>
+            <textarea name="feedback" id="feedback1" placeholder="Yours Feedback?">
+            </textarea>
+            <p id="feedbackError" ></p>
+            <br>
+            <input type="checkbox" id="checkbox1"> 
+            <label> <b>Was this helpfull?</b></label>
+            <br><br>
+            <button id="submit" type="button">Submit</button>
+            <br><br>
+
+        </form>
+        <input type="button" id="Btn4" value="Show Feedback Form" hidden>
+        </div></div>
+  
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#Btn1').click(function(){
+                $("#Box1").fadeTo(10,0.30);
+                $("#Box2").fadeTo(500,0.30);
+                $("#Box3").fadeTo(3000,0.30);
+            });
+            $('#Btn2').click(function(){
+                $("#Box1").fadeOut(10);
+                $("#Box2").fadeOut(500);
+                $("#Box3").fadeOut(3000);
+            });
+            $('#Btn3').click(function(){
+                $("#Box1").fadeToggle(10);
+                $("#Box2").fadeToggle(500);
+                $("#Box3").fadeToggle(3000);
+            });
+        });
+    </script>
+    <style>
+        #Box1{
+            background-color: blue;
+            width: 5em;
+            height: 5em;
+            display: none;
+        }
+        #Box2{
+            background-color: green;
+            width: 5em;
+            height: 5em;
+            display: none;
+        }
+        #Box3{
+            background-color: red;
+            width: 5em;
+            height: 5em;
+            display: none;
+        }
+        #Btn1{
+            background-color: blue;
+            border: 0ch;
+            padding: 0.8%;
+            color: white;
+        }
+        #Btn2{
+            background-color: green;
+            border: 0ch;
+            padding: 0.8%;
+            color: white;
+        }
+        #Btn3{
+            background-color: yellow;
+            border: 0ch;
+            padding: 0.8%;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="button" id="Btn1" value="Fade-In">
+        <input type="button" id="Btn2" value="Fade-Out">
+        <input type="button" id="Btn3" value="Toggle Out">
+    </div>
+    <br>
+    <div id="Box1">
+    </div>
+    <br>
+    <div id="Box2">
+    </div>
+    <br>
+    <div id="Box3">
+    </div>
+    
+</body>
+</html>
